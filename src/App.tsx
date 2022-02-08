@@ -7,9 +7,9 @@ import UncontrolledAccordion from "./components/Accordion/UncontrolledAccordion"
 import {UncontrolledRating} from "./components/Rating/UncontrolledRating";
 
 function App() {
-    console.log("App rendering")
+    //console.log("App rendering")
     return (
-        <div>
+        <div className={'App'}>
             <PageTitle title={'This is APP component'}/>
             <PageTitle title={'My friends'}/>
             <Rating value={3}/>
@@ -36,7 +36,7 @@ type PageTitlePropsType = {
 }
 
 function PageTitle (props: PageTitlePropsType) {
-    console.log("PageTitle rendering")
+    //console.log("PageTitle rendering")
     return <div><h1>{props.title}</h1></div>
 }
 
