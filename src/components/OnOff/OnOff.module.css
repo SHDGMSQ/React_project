@@ -1,0 +1,38 @@
+.body {
+    display: flex;
+    flex-direction: row;
+    margin: 5px;
+}
+
+.init {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.on {
+    background-color: green;
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.off {
+    background-color: red;
+    border: 1px solid black;
+    padding: 5px;
+}
+.lampOn {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: green;
+    border: 1px solid black;
+    margin-left: 20px;
+}
+.lampOff {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: red;
+    border: 1px solid black;
+    margin-left: 20px;
+}
