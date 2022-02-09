@@ -33,7 +33,7 @@ function App() {
             <Rating value={ratingValue} onClick={setRatingValue}/>
             <OnOff on={switchOn} onChange={setSwithOn}/>
             <OnOff on={switchOn} onChange={setSwithOn}/>
-            <UncontrolledOnOff/>
+            <UncontrolledOnOff onChange={setSwithOn}/> {switchOn.toString()}
             <UncontrolledAccordion titleValue={'Menu'}/>
             <UncontrolledAccordion titleValue={'Users'}/>
             <UncontrolledRating/>
