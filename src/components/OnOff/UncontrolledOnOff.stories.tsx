@@ -4,7 +4,7 @@ import {action} from "@storybook/addon-actions";
 
 
 export default {
-    title: 'UncontrolledOnOff',
+    title: 'components/UncontrolledOnOff',
     component: UncontrolledOnOff,
 }
 
