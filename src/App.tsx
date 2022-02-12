@@ -1,11 +1,11 @@
 import React, {useState} from 'react';
 import './App.css';
-import Accordion from "./components/Accordion/Accordion";
+import {Accordion} from "./components/Accordion/Accordion";
 import {Rating, RatingValueType} from "./components/Rating/Rating";
 import {OnOff} from "./components/OnOff/OnOff"
-import UncontrolledAccordion from "./components/Accordion/UncontrolledAccordion";
-import {UncontrolledRating} from "./components/Rating/UncontrolledRating";
-import {UncontrolledOnOff} from "./components/OnOff/UncontrolledOnOff";
+import {UncontrolledAccordion} from "./components/UncontrolledAccordion/UncontrolledAccordion";
+import {UncontrolledRating} from "./components/UncontrolledRating/UncontrolledRating";
+import {UncontrolledOnOff} from "./components/UncontrolledOnOff/UncontrolledOnOff";
 
 function App() {
 
@@ -36,8 +36,8 @@ function App() {
             <UncontrolledOnOff onChange={setSwithOn}/> {switchOn.toString()}
             <UncontrolledAccordion titleValue={'Menu'}/>
             <UncontrolledAccordion titleValue={'Users'}/>
-            <UncontrolledRating/>
-            <UncontrolledRating/>
+            <UncontrolledRating onChange={x=>x}/>
+            <UncontrolledRating onChange={x=>x}/>
         </div>
     );
 }

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import s from "./OnOff.module.css"
+import s from "../OnOff/OnOff.module.css"
 
 type PropsType = {
     //on: boolean

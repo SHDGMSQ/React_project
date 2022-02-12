@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Rating, RatingValueType} from "./Rating";
+import {Rating, RatingValueType} from "../Rating/Rating";
 import {UncontrolledRating} from "./UncontrolledRating";
 import {action} from "@storybook/addon-actions";
 
