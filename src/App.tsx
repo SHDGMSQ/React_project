@@ -18,18 +18,18 @@ function App() {
         <div className={'App'}>
             <PageTitle title={'This is APP component'}/>
             <PageTitle title={'My friends'}/>
-            <Accordion titleValue={"Menu"}
+           {/* <Accordion titleValue={"Menu"}
                        collapsed={accordionCollapsed}
                        onChange={() => {
                            setAccordionCollapsed(!accordionCollapsed)
                        }}
-            />
-            <Accordion titleValue={"Users"}
+            />*/}
+            {/*<Accordion titleValue={"Users"}
                        collapsed={accordionCollapsed}
                        onChange={() => {
                            setAccordionCollapsed(!accordionCollapsed)
                        }}
-            />
+            />*/}
             <Rating value={ratingValue} onClick={setRatingValue}/>
             <OnOff on={switchOn} onChange={setSwithOn}/>
             <OnOff on={switchOn} onChange={setSwithOn}/>
