@@ -6,15 +6,13 @@ type ItemType = {
     title: string,
     value: any
 }
-
-
 type SelectPropsType = {
     value?: any,
     onChange: (value: any) => void
     items: ItemType[]
 }
 
-export function Select(props: SelectPropsType) {
+function SelectSecret (props: SelectPropsType) {
 
     const [active, setActive] = useState(false)
     const [hoveredElementValue, setHoveredElementValue] = useState(props.value)
@@ -23,7 +21,6 @@ export function Select(props: SelectPropsType) {
         setHoveredElementValue(props.value);
     }, [props.value] )
 
-
     const selectedItem = props.items.find(f => f.value === props.value)
     const hoveredItem = props.items.find(f => f.value === hoveredElementValue)
     const toggleItems = () => setActive(!active)
@@ -31,7 +28,6 @@ export function Select(props: SelectPropsType) {
         props.onChange(value)
         toggleItems()
     }
-
     const onKeyUp = (e: KeyboardEvent<HTMLDivElement>) => {
         if (e.key === "ArrowDown" || e.key === "ArrowUp") {
             for (let i = 0; i < props.items.length; i++) {
@@ -56,6 +52,7 @@ export function Select(props: SelectPropsType) {
             setActive(false)
         }
     }
+
     return (
         <>
             <div className={s.select} tabIndex={0} onKeyUp={onKeyUp}>
@@ -79,3 +76,4 @@ export function Select(props: SelectPropsType) {
         </>
     )
 }
+export const Select = React.memo(SelectSecret)
