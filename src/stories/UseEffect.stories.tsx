@@ -35,3 +35,29 @@ export const SimpleExample = () => {
     </>
 }
 
+export const SetTimeoutExample = () => {
+    console.log("SetTimeoutExample")
+
+    const [fake, setFake] = useState(1)
+    const [counter, setCounter] = useState(1)
+    const [date, setDate] = useState(new Date().toLocaleTimeString())
+
+    const updateDate = () => {setDate(new Date().toLocaleTimeString())}
+
+    useEffect(() => {
+
+        setInterval( () => {
+            updateDate()
+        }, 1000 )
+
+    }, [date])
+
+
+
+        return <>
+        {/*<button onClick={() => setFake(fake + 1 )}>fake+</button>*/}
+        {/*<button onClick={() => setCounter(counter + 1 )}>counter+</button>*/}
+        Hello, counter: {date}
+    </>
+}
+
