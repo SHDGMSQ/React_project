@@ -10,7 +10,6 @@ export const HelpWithMemo = () => {
         display: 'inline-block',
         marginLeft: '10px'
     }
-
     const [cities, setCities] = useState([
         {id: 'belarusId', title: 'Minsk', countPeople: 2000000},
         {id: 'belarusId', title: 'Vitebsk', countPeople: 300000},
