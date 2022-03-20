@@ -46,11 +46,15 @@ export const SetTimeoutExample = () => {
 
     useEffect(() => {
 
-        setInterval( () => {
+        const intervalId = setInterval( () => {
+            console.log('TICK');
             updateDate()
         }, 1000 )
 
-    }, [date])
+    return () => {
+            clearInterval(intervalId)
+    }
+    }, [])
 
 
 
