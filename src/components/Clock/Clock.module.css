@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.clock {
+    margin: 50px auto;
+
+}
+.clockHours {
+    display: block;
+    position: absolute;
+    left: 115px;
+    top:187px;
+    width: 700px;
+    height: 700px;
+}
+
+
+.clockMin {
+    display: block;
+    position: absolute;
+    left: 315px;
+    top:185px;
+}
+
+.clockSec {
+    display: block;
+    position: absolute;
+    left: 315px;
+    top: 185px;
+}
+
+

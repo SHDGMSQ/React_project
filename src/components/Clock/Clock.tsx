@@ -1,7 +1,9 @@
 import React, {useEffect, useState} from 'react';
+import {ClockAnalog} from './ClockAnalog';
 
 
-type PropsType = {}
+type PropsType = {
+}
 
 const get2digitsString = (num: number) => num < 10 ? '0' + num : num
 
@@ -28,5 +30,6 @@ export const Clock: React.FC<PropsType> = (props) => {
         <span>{get2digitsString(date.getMinutes())}</span>
         :
         <span>{get2digitsString(date.getSeconds())}</span>
+        <ClockAnalog date={date}/>
     </>;
 };
