@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import s from './Clock.module.css';
 import clockFace from './clockFace.png';
 import clockMin from './min.png';
@@ -6,11 +6,23 @@ import clockSec from './sec.png';
 import clockHours from './hours.png';
 
 type ClockAnalogPropsType = {
-    date: Date
+
 }
 
-export const ClockAnalog: React.FC<ClockAnalogPropsType> = ({date}) => {
+export const ClockAnalog: React.FC<ClockAnalogPropsType> = () => {
 
+    const [date, setDate] = useState(new Date());
+
+    useEffect(() => {
+        const intervalId = setInterval(() => {
+            console.log('TICK');
+            setDate(new Date());
+        }, 1000);
+
+        return () => {
+            clearInterval(intervalId)
+        }
+    }, []);
     const secondStyle = {
         transform: `rotate(${date.getSeconds() * 6}deg)`
     };
